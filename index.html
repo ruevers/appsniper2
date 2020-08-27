@@ -269,7 +269,7 @@ function resizeIframe(obj) {
 obj.style.height = obj.contentWindow.document.getElementById('until2d').scrollHeight  + 'px' ;
 }
 </script>
-<center><div class="clock0" id="clock2"><div><span>22</span><p>minutos</p></div><div><span>19</span><p>segundos</p></div> </div></center></div> </div></div></div></div></div><div style='padding-top:25px;border-top-width:px;border-top-style:solid;border-top-color:;border-bottom-width:px;border-bottom-style:solid;border-bottom-color:;'  class="row one-column cf ui-sortable section to-be-animated-row anim-row-5f46747767b50  " id="le_body_row_9" data-style="eyJlbGVtZW50SWQiOiJsZV9ib2R5X3Jvd185IiwicGFkZGluZ1RvcCI6IjI1IiwiYm9yZGVyVG9wV2lkdGgiOiIiLCJib3JkZXJUb3BDb2xvciI6IiIsImJvcmRlckJvdHRvbVdpZHRoIjoiIiwiYm9yZGVyQm90dG9tQ29sb3IiOiIiLCJzZWN0aW9uU2VwYXJhdG9yVHlwZSI6Im5vbmUiLCJzZWN0aW9uU2VwYXJhdG9yU3R5bGUiOiIiLCJleHRyYXMiOnsiYW5pbWF0aW9uRWZmZWN0IjoiIiwiYW5pbWF0aW9uRGVsYXkiOiIzMDAifSwicm93U2Nyb2xsRml4ZWRQb3NpdGlvbiI6Im5vbmUiLCJyb3dTY3JvbGxGaXhlZE1vYmlsZSI6ZmFsc2UsImFkZG9uIjp7fX0="><script id="row-animation-9">
+<center><div class="clock2" id="clock2"><div><span>22</span><p>minutos</p></div><div><span>19</span><p>segundos</p></div> </div></center></div> </div></div></div></div></div><div style='padding-top:25px;border-top-width:px;border-top-style:solid;border-top-color:;border-bottom-width:px;border-bottom-style:solid;border-bottom-color:;'  class="row one-column cf ui-sortable section to-be-animated-row anim-row-5f46747767b50  " id="le_body_row_9" data-style="eyJlbGVtZW50SWQiOiJsZV9ib2R5X3Jvd185IiwicGFkZGluZ1RvcCI6IjI1IiwiYm9yZGVyVG9wV2lkdGgiOiIiLCJib3JkZXJUb3BDb2xvciI6IiIsImJvcmRlckJvdHRvbVdpZHRoIjoiIiwiYm9yZGVyQm90dG9tQ29sb3IiOiIiLCJzZWN0aW9uU2VwYXJhdG9yVHlwZSI6Im5vbmUiLCJzZWN0aW9uU2VwYXJhdG9yU3R5bGUiOiIiLCJleHRyYXMiOnsiYW5pbWF0aW9uRWZmZWN0IjoiIiwiYW5pbWF0aW9uRGVsYXkiOiIzMDAifSwicm93U2Nyb2xsRml4ZWRQb3NpdGlvbiI6Im5vbmUiLCJyb3dTY3JvbGxGaXhlZE1vYmlsZSI6ZmFsc2UsImFkZG9uIjp7fX0="><script id="row-animation-9">
                     ;(function ($) {
                         $(window).load(function() {
                             var element = $("#le_body_row_9");
@@ -344,6 +344,14 @@ obj.style.height = obj.contentWindow.document.getElementById('until2d').scrollHe
       
       +'<div><span>%M</span><p style="color: white">minutos</p></div>'
       +'<div><span>%S</span><p style="color: white">segundos</p></div>'));
+  });
+
+  // countdown plungin init
+  $('.clock2').countdown(now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate() + " " + (now.getHours()+hor) + ":" + (m) + ":" + now.getSeconds(), function(event) {
+    $(this).html(event.strftime(''
+      
+      +'<div><span>%M</span><p style="color: black">minutos</p></div>'
+      +'<div><span>%S</span><p style="color: black">segundos</p></div>'));
   });
 </script>
 
