@@ -321,7 +321,7 @@ obj.style.height = obj.contentWindow.document.getElementById('until2d').scrollHe
     var minu = now.getMinutes();
     
   // countdown plungin init
-  $('#clock').countdown(now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate() + " " + (now.getHours()+1) + ":" + (minu) + ":" + now.getSeconds(), function(event) {
+  $('#clock').countdown(now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate() + " " + ((now.getHours())+1) + ":" + (minu) + ":" + now.getSeconds(), function(event) {
     $(this).html(event.strftime(''
       
       +'<div><span>%M</span><p style="color: white">minutos</p></div>'
