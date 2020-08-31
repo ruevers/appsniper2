@@ -319,18 +319,9 @@ obj.style.height = obj.contentWindow.document.getElementById('until2d').scrollHe
  <script type="text/javascript">
   var now= new Date;
     var minu = now.getMinutes();
-    var hor = 0;
-    var m = 0;
-
-  if ((minu+30)>59) {
-    hor = 1
-    m = minu - 29;
-  }else{
-    hor =0;
-    m = 30;
-  }
+    
   // countdown plungin init
-  $('#clock').countdown(now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate() + " " + (now.getHours()+hor) + ":" + (m) + ":" + now.getSeconds(), function(event) {
+  $('#clock').countdown(now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate() + " " + (now.getHours()+1) + ":" + (minu) + ":" + now.getSeconds(), function(event) {
     $(this).html(event.strftime(''
       
       +'<div><span>%M</span><p style="color: white">minutos</p></div>'
